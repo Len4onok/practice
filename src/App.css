@@ -1,0 +1,66 @@
+header {
+  text-align: center;
+  margin: 20px;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+
+
+.words{
+  width: 400px;
+  margin: 20px auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: large;
+  padding: 5px;
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: yellow;
+}
+
+span {
+  width: 100px;
+  height: 30px;
+  border: 1px solid black;
+  margin: 5px;
+  text-align: center;
+
+}
+
+p {
+  width: 400px;
+  margin: 20px auto;
+  text-align: center;
+  font-size: large;
+}
+
+.result{
+display: inline;
+border: none; 
+}
+
+.right{
+  color: green;
+}
+
+.wrong{
+  color: red;
+}
+
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: large;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 400px;
+  border-radius: 10px;
+  display: block;
+  margin: 20px auto;
+}
