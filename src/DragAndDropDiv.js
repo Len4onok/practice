@@ -4,12 +4,14 @@ import {DragDropContext, Droppable, Draggable} from 'react-beautiful-dnd'
 function DragAndDropDiv({engArr, setEngArr}) {
   
 	function handleOnDragEnd(result) {
+		if (!result.destination) {
+			return;
+		  }
 	const items = Array.from(engArr);
-	if (result||result!=null){
 	const [reorderedItem] = items.splice(result.source.index, 1);	
 	items.splice(result.destination.index, 0, reorderedItem);
 	setEngArr(items);}
-	}
+	
 
 	return <DragDropContext onDragEnd={handleOnDragEnd}>
 		<Droppable droppableId="words">
