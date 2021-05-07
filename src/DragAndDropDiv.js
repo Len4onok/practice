@@ -5,9 +5,10 @@ function DragAndDropDiv({engArr, setEngArr}) {
   
 	function handleOnDragEnd(result) {
 	const items = Array.from(engArr);
-	const [reorderedItem] = items.splice(result.source.index, 1);
+	if (result||result!=null){
+	const [reorderedItem] = items.splice(result.source.index, 1);	
 	items.splice(result.destination.index, 0, reorderedItem);
-	setEngArr(items);
+	setEngArr(items);}
 	}
 
 	return <DragDropContext onDragEnd={handleOnDragEnd}>
@@ -18,8 +19,7 @@ function DragAndDropDiv({engArr, setEngArr}) {
 						return (
 							<Draggable key={id} draggableId={id} index={index}>
 								{(provided) => (
-									<span ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps} >{name}
-										
+									<span ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps} >{name}	
 									</span>
 								)}
 							</Draggable>
